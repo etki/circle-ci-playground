@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: echo 'export VAR=true' | sudo tee /etc/profile.d/pickup.sh
       - run: sudo chmod a+x /etc/profile.d/pickup.sh
-      - run: echo $VAR
+      - run: echo $BASH_PROFILE
 workflows:
   default:
     jobs:
