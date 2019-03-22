@@ -1,0 +1,9 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11
+    steps:
+      - run: echo 'VAR=true' > /etc/profile.d/pickup.sh
+      - run: chmod a+x /etc/profile.d/pickup.sh
+      - run: echo $VAR
